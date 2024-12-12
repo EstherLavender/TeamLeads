@@ -7,6 +7,7 @@ import { ConnectButton } from "thirdweb/react";
 import { createWallet, inAppWallet } from "thirdweb/wallets";
 import { createThirdwebClient } from "thirdweb";
 import { avalancheFuji } from "thirdweb/chains";
+import Bot from "./components/Bot"; // Import the new Bot component
 
 const StyledApp = styled.div`
   background-color: #E84142;
@@ -45,7 +46,6 @@ const wallets = [
 ];
 
 function App() {
-
   return (
     <StyledApp>
       <AppContainer>
@@ -55,6 +55,7 @@ function App() {
           </FlexBoxRow>
           <TransferAvax />
           <Counter />
+          <Bot /> {/* Add the Bot component */}
         </FlexBoxCol>
       </AppContainer>
     </StyledApp>
